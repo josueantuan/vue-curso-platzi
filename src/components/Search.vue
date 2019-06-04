@@ -1,6 +1,5 @@
-/* eslint-disable vue/require-v-for-key */
 <template>
-  <div>
+  <div id="search">
     <notification-vue v-show="showNotification">
       <p slot="body">
         No se encontraron resultados
@@ -55,12 +54,11 @@
 </template>
 
 <script>
-import trackServices from './services/track'
-import trackVue from './components/Track.vue'
-import loaderVue from './components/shared/Loader.vue'
-import notificationVue from './components/shared/Notification.vue'
+import trackServices from '../services/track'
+import trackVue from './Track.vue'
+import loaderVue from './shared/Loader.vue'
+import notificationVue from './shared/Notification.vue'
 export default {
-  name: 'App',
   components: {
     trackVue,
     loaderVue,
