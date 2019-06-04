@@ -20,8 +20,17 @@
           <h1 class="title">
             Platzi Music
           </h1>
+          <player-vue />
         </div>
       </div>
     </section>
   </div>
 </template>
+<script>
+import playerVue from './Player.vue'
+export default {
+  components: {
+    playerVue
+  }
+}
+</script>

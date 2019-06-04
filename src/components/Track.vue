@@ -25,7 +25,7 @@
       </div>
       <div class="content">
         <small>
-          {{ track.duration_ms }}
+          [{{ track.duration_ms }}]
         </small>
         <nav class="level">
           <div class="level-left">
@@ -54,6 +54,7 @@ export default {
   methods: {
     selectTrack () {
       this.$emit('select', this.track.id)
+      this.$bus.$emit('set-track', this.track)
     }
   }
 }
